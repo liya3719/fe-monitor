@@ -12,9 +12,9 @@ export class mkdirService {
   static createDirPath() {
     var dirPath;
     if (process.platform === 'win32') {
-      dirPath = `E:/fe-static/images/`;
+      dirPath = `E:/fe-monitor/`;
     } else {
-      dirPath = '/data/fe-static/images/';
+      dirPath = '/data/fe-monitor/';
     }
     return dirPath;
   }
