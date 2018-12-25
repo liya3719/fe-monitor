@@ -48,7 +48,7 @@ npm run dev
 ```
 
 #### 监控流程图
-
+![监控系统流转图](https://github.com/liya3719/fe-monitor/blob/master/fe-monitor.png)
 
 ### 备注
 
