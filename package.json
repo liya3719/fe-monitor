@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "complied": "./node_modules/.bin/tsc",
-    "start": "npm run complied && cross-env NODE_ENV=prod ./node_modules/.bin/pm2 start server/server.js -i max --name fe_monitor_node -e error.log",
+    "start": "npm run complied && cross-env NODE_ENV=prod ./node_modules/.bin/pm2 start server/server.js -i max --name btf-fe-monitor -e error.log",
     "stop": "./node_modules/.bin/pm2 kill",
     "restart": "npm run stop && npm start",
     "dev": "npm run complied && cross-env NODE_ENV=dev ./node_modules/.bin/devtool server/server.js --watch",

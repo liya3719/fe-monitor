@@ -1,6 +1,6 @@
 ### 项目介绍
 
-前端监控，项目架构基于Typescript、koa2搭建，使得开发应用变得几乎跟java类似，强类型的使用使得我们能更方便的维护应用业务逻辑，编译阶段即可发现潜在的由于类型使用不正确而导致的应用错误
+前端监控
 
 ### 项目说明
 - config 存放各种配置文件，数据库配置、中间件配置、依赖注入配置、编译目录配置
@@ -49,8 +49,20 @@ npm run dev
 
 #### 监控流程图
 <!-- ![监控系统流转图](https://github.com/liya3719/fe-monitor/blob/master/fe-monitor.png) -->
+#### 监控内容
 
-### 备注
+- 时间类, 主要使用performance.timing,收集各种耗时，包括DNS查询耗时、TCP连接耗时、request耗时、资源加载耗时(全部资源耗时)、解析dom耗时、白屏耗时、Domready时间、onload时间
+- 错误类, window.onerror, promise错误(window.addEventListener('unhandledrejection'))事件, sourceMap, .map文件保存到内网环境，调用mozilla/source-map进行源码映射
+- 基本信息类, 主要包括 当前用户使用的操作系统、当前浏览器以及版本、内存(内存大小的限制、可使用的内存、js对象使用的内存)、cpu数量、网络连接数、pv、uv、客户端语言、ip(ip所在的区域)、使用的网络、分辨率
+
+#### 数据上报方式
+
+- navgiator.sendBeacon
+- 1px*1px gif图片?data={}
+- xmlHttpRequest
+
+#### 备注
 
 - **由于项目接入了mysql，所以开发前请务必安装了mysql数据库，并且修改项目根目录下面的config/dev.js上面的数据库配置，以及在本地建立logs存放目录**
+- **时序数据库(TSDB\HitSDB\Kairosdb\OpenTsdb\beringei)**
 - **node版本建议>=8.9.0**
