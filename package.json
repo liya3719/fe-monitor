@@ -21,7 +21,7 @@
     "decompress": "^4.2.0",
     "decompress-targz": "^4.1.1",
     "ejs": "^2.5.8",
-    "electron": "^1.7.2",
+    "electron": "^9.1.0",
     "fs-extra": "^5.0.0",
     "heibao-utils": "^0.0.6",
     "jade": "^1.11.0",
