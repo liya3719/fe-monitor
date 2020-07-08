@@ -7,10 +7,10 @@ module.exports.loggerSetting = {
 };
 
 module.exports.dbConfig = {
-    host: "172.16.16.32",
-    user: "root",
-    password: "nat-fe123",
-    database: "upload",
+    host: "",
+    user: "",
+    password: "",
+    database: "",
     connectionLimit: 10,
     port: "3306",
     waitForConnections: false,
